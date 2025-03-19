@@ -1,0 +1,25 @@
+{
+  "name": "utils-core",
+  "version": "1.0.3",
+  "description": "This package offers a comprehensive collection of widely-used utility functions for both JavaScript and TypeScript projects, designed to streamline development",
+  "keywords": [
+    "utility",
+    "javascript",
+    "typescript"
+  ],
+  "license": "ISC",
+  "author": "angel",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  }
+}
