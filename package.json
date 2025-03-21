@@ -1,6 +1,6 @@
 {
   "name": "utils-core",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This package offers a comprehensive collection of widely-used utility functions for both JavaScript and TypeScript projects, designed to streamline development",
   "keywords": [
     "utility",
