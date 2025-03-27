@@ -41,3 +41,8 @@ export const capitalizeWords = (
     return "";
   }
 };
+
+export const shortenAddress = (address: string | undefined) => {
+  if (!address) return "";
+  return `${address.slice(0, 5)}...${address.slice(-5)}`;
+};

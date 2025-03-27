@@ -10,3 +10,4 @@ export * from "./json";
 export * from "./strings";
 export * from "./text";
 export * from "./types";
+export * from "./number";

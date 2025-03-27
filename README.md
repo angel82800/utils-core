@@ -51,3 +51,7 @@ const randomSring = randomString(8);
 | isEmptyObject(value: object)  | Checks if an object is empty (has no keys).  | {}  | true  |
 | objectToQueryString(obj: Record<string, any>)  | Converts an object into a URL-encoded query string.  | obj: Record<string, any>  | string  |
 | deepObjectToQueryString(obj: any, prefix: string)  | Converts a nested object into a URL-encoded query string.  | deepObjectToQueryString(obj, "")  | string  |
+| shortenAddress(address: string) | Shortens a wallet address by showing first 5 and last 5 characters with ellipsis in between | (address: string | undefined) => string | shortenAddress("0x71C7656EC7ab88b098defB751B7401B5f6d8976F") → "0x71C...8976F" |
+| convertDecToHex(num: number) | Converts a decimal number to its hexadecimal string representation | (num: number) => string | convertDecToHex(255) → "ff" |
+| convertHexToDec(str: string | number) | Converts a hexadecimal string or number to its decimal equivalent | (str: string | number) => number | convertHexToDec("0x1a") → 26 |
+| convertNumberToCurrency(num: number, locales?, currency?) | Converts a number to currency format using Intl.NumberFormat | (num: number, locales = "en-US", currency = "USD") => string | convertNumberToCurrency(1234.56) → "$1,234.56" |
