@@ -6,5 +6,7 @@ exports.sleep = void 0;
  * @param ms Time to wait (in ms)
  * @returns A promise that resolves after the delay
  */
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+var sleep = function (ms) {
+    return new Promise(function (resolve) { return setTimeout(resolve, ms); });
+};
 exports.sleep = sleep;

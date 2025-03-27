@@ -6,5 +6,5 @@ exports.getFileExtension = void 0;
  * @param filename The name of the file
  * @returns The file extension
  */
-const getFileExtension = (filename) => { var _a; return ((_a = filename === null || filename === void 0 ? void 0 : filename.split(".")) === null || _a === void 0 ? void 0 : _a.pop()) || ""; };
+var getFileExtension = function (filename) { var _a; return ((_a = filename === null || filename === void 0 ? void 0 : filename.split(".")) === null || _a === void 0 ? void 0 : _a.pop()) || ""; };
 exports.getFileExtension = getFileExtension;

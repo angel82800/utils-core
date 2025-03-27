@@ -26,3 +26,4 @@ __exportStar(require("./json"), exports);
 __exportStar(require("./strings"), exports);
 __exportStar(require("./text"), exports);
 __exportStar(require("./types"), exports);
+__exportStar(require("./number"), exports);

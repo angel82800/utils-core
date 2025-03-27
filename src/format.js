@@ -8,7 +8,8 @@ exports.getDecimalFormating = void 0;
  * @param isDecimal A flag to specify whether to force two decimal places. Default is false.
  * @returns A formatted string with the number, or an empty string if the input is invalid. (1000 => 1,000, 2023001 => 2,023,001)
  */
-const getDecimalFormating = (num, isDecimal = false) => {
+var getDecimalFormating = function (num, isDecimal) {
+    if (isDecimal === void 0) { isDecimal = false; }
     if (!num || isNaN(Number(num))) {
         return "";
     }

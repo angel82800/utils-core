@@ -6,7 +6,7 @@ exports.parseJSON = void 0;
  * @param value Ex: "{'a': 'b'}"
  * @returns Ex: {'a': 'b'}
  */
-const parseJSON = (str) => {
+var parseJSON = function (str) {
     try {
         return JSON.parse(str);
     }

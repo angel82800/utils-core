@@ -1,4 +1,13 @@
 "use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.flattenArray = exports.shuffleArray = exports.uniqueArray = void 0;
 /**
@@ -7,9 +16,11 @@ exports.flattenArray = exports.shuffleArray = exports.uniqueArray = void 0;
  * @param arr The array to filter
  * @returns A new array with unique elements
  */
-const uniqueArray = (arr) => [...new Set(arr)];
+var uniqueArray = function (arr) { return __spreadArray([], new Set(arr), true); };
 exports.uniqueArray = uniqueArray;
-const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
+var shuffleArray = function (arr) {
+    return arr.sort(function () { return Math.random() - 0.5; });
+};
 exports.shuffleArray = shuffleArray;
 /**
  * Flatten a nested array into a single-level array
@@ -17,5 +28,5 @@ exports.shuffleArray = shuffleArray;
  * @param arr The array to flatten
  * @returns A single-level array
  */
-const flattenArray = (arr) => arr.flat(Infinity);
+var flattenArray = function (arr) { return arr.flat(Infinity); };
 exports.flattenArray = flattenArray;

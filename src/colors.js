@@ -6,8 +6,8 @@ exports.hexToRgb = void 0;
  * @param hex The hex color code (e.g., "#FFFFFF")
  * @returns An object with r, g, and b properties
  */
-const hexToRgb = (hex) => {
-    const bigint = parseInt(hex.slice(1), 16);
+var hexToRgb = function (hex) {
+    var bigint = parseInt(hex.slice(1), 16);
     return { r: (bigint >> 16) & 255, g: (bigint >> 8) & 255, b: bigint & 255 };
 };
 exports.hexToRgb = hexToRgb;
