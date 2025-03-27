@@ -24,8 +24,7 @@
     "url": "https://github.com/angel82800/utils-core"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",

@@ -1,22 +1,12 @@
 {
   "compilerOptions": {
+    "outDir": "./dist",     // Output folder for compiled files
+    "rootDir": "./src",     // Source folder (must match your project structure)
+    "declaration": true,    // Generates .d.ts files for TypeScript
     "target": "ES2019",
     "module": "CommonJS",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true, // Generates .d.ts files for TypeScript support
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "strict": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*"],  // Only compile files in `src/`
+  "exclude": ["node_modules", "**/*.test.ts"]  // Ignore tests
 }
