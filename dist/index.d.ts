@@ -11,3 +11,4 @@ export * from "./strings";
 export * from "./text";
 export * from "./types";
 export * from "./number";
+export * from "./functions";

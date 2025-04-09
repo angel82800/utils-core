@@ -27,3 +27,4 @@ __exportStar(require("./strings"), exports);
 __exportStar(require("./text"), exports);
 __exportStar(require("./types"), exports);
 __exportStar(require("./number"), exports);
+__exportStar(require("./functions"), exports);
