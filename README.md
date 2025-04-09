@@ -57,3 +57,6 @@ const randomSring = randomString(8);
 | convertDecToHex(num: number) | Converts a decimal number to its hexadecimal string representation | (num: number) => string | convertDecToHex(255) → "ff" |
 | convertHexToDec(str: string or number) | Converts a hexadecimal string or number to its decimal equivalent | (str: string | number) => number | convertHexToDec("0x1a") → 26 |
 | convertNumberToCurrency(num: number, locales?, currency?) | Converts a number to currency format using Intl.NumberFormat | (num: number, locales = "en-US", currency = "USD") => string | convertNumberToCurrency(1234.56) → "$1,234.56" |
+| safeCall(fn, ...fallbacks) | Safely attempts to execute a function, falling back to subsequent functions if errors occur | <T>(fn: () => T, ...fallbacks: Array<() => T>) => T | safeCall(() => throw Error(), () => 42) → 42 |
+| safeCallT<T>(fn, ...fallbacks) | Safely executes a function, falling back to alternative functions if it throws | <T>(fn: () => T, ...fallbacks: Array<() => T>) => T | safeCallT(() => mightThrow(), () => fallbackValue) → returns result or fallback |
+| noop() | A no-operation function that does nothing and returns void | () => void | noop() → (void) |
