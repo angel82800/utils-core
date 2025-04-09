@@ -26,6 +26,8 @@ const randomSring = randomString(8);
 | Name  | Description  | Ex.Input  | Ex.Output  |
 | ------------- | ------------- | ------------- | ------------- |
 | uniqueArray(array)  | Removes duplicates from an array.  | [1, 2, 2, 3, 4, 4, 5]  | [1, 2, 3, 4, 5]  |
+| uniqueArrayByKey<T>(arr: T[], key: keyof T) | Returns a new array with unique objects based on a specified key property | <T>(arr: T[], key: keyof T) => T[] | uniqueArrayByKey([{id:1},{id:1},{id:2}], 'id') → [{id:1},{id:2}] |
+| deepUniqueArray(arr, compareFn?) | Removes duplicate items from an array using deep comparison or custom compare function | <T>(arr: T[], compareFn?: (a: T, b: T) => boolean) => T[] | deepUniqueArray([{a:1}, {a:1}, {a:2}]) → [{a:1}, {a:2}] |
 | shuffleArray(array)  | Shuffles the elements of an array randomly.  | [1, 2, 3, 4, 5]  | [3, 1, 5, 2, 4] |
 | flattenArray(array)  | Flattens a nested array to a single-level array. | [[1, 2], [3, [4, 5]], 6]  | [1, 2, 3, 4, 5, 6]  |
 | sleep(ms: number)  | Delays execution for a specified number of milliseconds. Returns a Promise.  | 2000  | Resolves after 2 seconds.  |
@@ -53,5 +55,5 @@ const randomSring = randomString(8);
 | deepObjectToQueryString(obj: any, prefix: string)  | Converts a nested object into a URL-encoded query string.  | deepObjectToQueryString(obj, "")  | string  |
 | shortenAddress(address: string) | Shortens a wallet address by showing first 5 and last 5 characters with ellipsis in between | (address: string | undefined) => string | shortenAddress("0x71C7656EC7ab88b098defB751B7401B5f6d8976F") → "0x71C...8976F" |
 | convertDecToHex(num: number) | Converts a decimal number to its hexadecimal string representation | (num: number) => string | convertDecToHex(255) → "ff" |
-| convertHexToDec(str: string | number) | Converts a hexadecimal string or number to its decimal equivalent | (str: string | number) => number | convertHexToDec("0x1a") → 26 |
+| convertHexToDec(str: string or number) | Converts a hexadecimal string or number to its decimal equivalent | (str: string | number) => number | convertHexToDec("0x1a") → 26 |
 | convertNumberToCurrency(num: number, locales?, currency?) | Converts a number to currency format using Intl.NumberFormat | (num: number, locales = "en-US", currency = "USD") => string | convertNumberToCurrency(1234.56) → "$1,234.56" |

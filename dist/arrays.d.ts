@@ -5,6 +5,8 @@
  * @returns A new array with unique elements
  */
 export declare const uniqueArray: <T>(arr: T[]) => T[];
+export declare const uniqueArrayByKey: <T>(arr: T[], key: keyof T) => T[];
+export declare const deepUniqueArray: <T>(arr: T[], compareFn?: (a: T, b: T) => boolean) => T[];
 export declare const shuffleArray: <T>(arr: T[]) => T[];
 /**
  * Flatten a nested array into a single-level array
